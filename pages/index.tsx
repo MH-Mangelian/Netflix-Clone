@@ -4,6 +4,7 @@ import Header  from '@/components/Header'
 import  Banner  from '@/components/Banner'
 import requests from '@/utils/requests'
 import { Movie } from '@/typings'
+import Row from '@/components/Row'
 
 
 interface Props {
@@ -30,22 +31,26 @@ export default function Home({
   
 }: Props) {
   return (
-    <div className='relative h-screen bg-gradient-to-b from-slate-900/10 to-[hsl(225,85%,5%)] lg:h-[140vh]'>
+    <div className='relative h-screen w-screen bg-gradient-to-b from-slate-900/10 to-[hsl(225,85%,5%)] lg:h-[140vh]'>
       <Head>
         <title>NetFlix - Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
       <Header/>
-      <main>
+      <main className='w-screen relative pl-4 pb-24 lg:space-y-24 lg:pl-16'>
         <Banner netflixOriginals={netflixOriginals}/>
-        <section>
-          {/* {--------------row------------------} */}
-          {/* {--------------row------------------} */}
-          {/* {--------------row------------------} */}
-          {/* {--------------row------------------} */}
-          {/* {--------------row------------------} */}
-          {/* {--------------row------------------} */}
+        <section className="md:space-y-24">
+        <Row title="Trending Now" movies={trendingNow} />
+          <Row title="Top Rated" movies={topRated} />
+          <Row title="Action Thrillers" movies={actionMovies} />
+          {/*----------------------My List------------------------ */}
+          {/* {list.length > 0 && <Row title="My List" movies={list} />} */}
+
+          <Row title="Comedies" movies={comedyMovies} />
+          <Row title="Scary Movies" movies={horrorMovies} />
+          <Row title="Romance Movies" movies={romanceMovies} />
+          <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
       {/* {-------Modal-------} */}
