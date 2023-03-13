@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import Header  from '@/components/Header'
 import  Banner  from '@/components/Banner'
 import requests from '@/utils/requests'
@@ -35,7 +34,7 @@ export default function Home({
     '>
       <Head>
         <title>NetFlix - Home</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/Netflix_icon.svg" />
       </Head>
       
       <Header/>

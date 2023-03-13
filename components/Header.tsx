@@ -1,22 +1,27 @@
 import Link from "next/link";
 import { HiSearch, HiBell, HiUser } from "react-icons/hi";
 import { useState , useEffect} from "react";
+
+
 const Header = () => {
-  const [isScroll, setIsScroll] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
+
   useEffect(() => {
     const handleScroll = () => {
-        if (window.scrollY > 0) {
-            setIsScroll(true);
-        } else {
-            setIsScroll(false);
-    }   
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }}, []);
+      if (window.scrollY > 0) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
-    <header className={`${ isScroll && 'bg-[hsl(0,0%,8%)]'}`}>
+    <header className={`${isScrolled && 'bg-[hsl(0,0%,8%)]'}`}>
       {/* --------------------------Left---------------------------------- */}
       <div className="flex items-center space-x-2 md:space-x-10">
         <img
