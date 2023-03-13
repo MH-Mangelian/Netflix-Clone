@@ -31,7 +31,8 @@ export default function Home({
   
 }: Props) {
   return (
-    <div className='relative h-screen w-screen bg-gradient-to-b from-slate-900/10 to-[hsl(225,85%,5%)] lg:h-[140vh]'>
+    <div className='relative h-screen w-screen bg-gradient-to-b from-slate-900/10 to-[hsl(225,85%,5%)] lg:h-[140vh]
+    '>
       <Head>
         <title>NetFlix - Home</title>
         <link rel="icon" href="/favicon.ico" />
