@@ -5,7 +5,11 @@
 /* -------------------Basic:html,header,body--------------------------- */
 @layer base{
   html{
-    @apply bg-[hsl(0,0%,8%)] text-white;
+    @apply bg-[hsl(0,0%,8%)] text-white scrollbar-hide ;
+  }
+
+  body{
+    @apply !scrollbar-track-transparent !scrollbar-thumb-slate-600;
   }
 
   header{
