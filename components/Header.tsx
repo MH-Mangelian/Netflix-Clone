@@ -33,11 +33,11 @@ const Header = () => {
         />
 
         <ul className="hidden space-x-4 md:flex">
-          <li className="headerLink">Home</li>
-          <li className="headerLink">TV Shows</li>
-          <li className="headerLink">Movies</li>
-          <li className="headerLink">New & Popular</li>
-          <li className="headerLink">My List</li>
+          <Link href='/'><li className="headerLink">Home</li></Link>
+          <Link href='/login'><li className="headerLink">TV Shows</li></Link>
+          <Link href='/login'><li className="headerLink">Movies</li></Link>
+          <Link href='/login'><li className="headerLink">New & Popular</li></Link>
+          <Link href='/login'><li className="headerLink">My List</li></Link>
         </ul>
       </div>
       {/* --------------------------End Left---------------------------------- */}
@@ -46,8 +46,8 @@ const Header = () => {
       <div className="flex items-center space-x-4 text-sm font-light">
         <HiSearch className="hidden h-6 w-6 cursor-pointer sm:inline " />
         <p className="hidden lg:inline">Kids</p>
-        <HiBell className="h-6 w-6 cursor-pointer " />
-        <Link href="/account">
+        <Link href="/login"><HiBell className="h-6 w-6 cursor-pointer " /></Link>
+        <Link href="/login">
           <HiUser className="h-6 w-6 cursor-pointer" />
         </Link>
       </div>
