@@ -4,6 +4,7 @@ import  Banner  from '@/components/Banner'
 import requests from '@/utils/requests'
 import { Movie } from '@/typings'
 import Row from '@/components/Row'
+import Footer from '@/components/Footer'
 
 
 interface Props {
@@ -53,7 +54,7 @@ export default function Home({
           <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
-      {/* {-------Modal-------} */}
+      <Footer/>
     </div>
   )
 }
